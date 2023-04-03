@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #newsletter {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: none;
+      }
+
+      #newsletter .close {
+        margin-left: auto;
+        margin-right: 4em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Hello world</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus unde a sunt sapiente quia explicabo asperiores, assumenda corrupti
+        voluptas suscipit ea dolores optio temporibus neque dolorum sit saepe impedit. Asperiores?
+      </p>
+
+      <div id="newsletter">
+        <button class="close">X</button>
+        <h2>Please sign up to my newsletter</h2>
+        <p>Just enter your email below, and get good deals!</p>
+        <input type="text" />
+        <button>Submit</button>
+      </div>
+
+      <script>
+        const newsletter = document.querySelector("#newsletter");
+        const newsletterCloseBtn = document.querySelector("#newsletter .close");
+
+        setTimeout(() => {
+          newsletter.style.display = "flex";
+        }, 3000);
+
+        newsletterCloseBtn.addEventListener("click", () => {
+          newsletter.style.display = "none";
+        });
+      </script>
+    </main>
+  </body>
+</html>
